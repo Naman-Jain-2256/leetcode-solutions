@@ -22,7 +22,7 @@ The richest customer is the one with the maximum wealth.
 - **File**: `sol1.py`
 
 
-## ✔️ Solution 1: List Comprehension + `max()`
+## ✔️ Solution 2: List Comprehension + `max()`
 
 - **Approach**: Use a generator expression to calculate the sum of each customer's accounts and return the maximum.
 - **Time Complexity**: O(m × n), where `m` = number of customers and `n` = number of banks
