@@ -24,3 +24,9 @@ class Solution:
             if letter_map_mag.get(letter, 0) < count:
                 return False            
         return True
+
+if __name__ == "__main__": # test_case run
+    ransomNote = "aa"
+    magazine = "ab"
+    sol = Solution()
+    print(sol.canConstruct(ransomNote, magazine)) # output: False
