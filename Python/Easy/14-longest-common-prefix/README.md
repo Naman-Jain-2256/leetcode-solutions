@@ -33,6 +33,29 @@ If there is **no common prefix**, return an **empty string `""`**.
 
 ---
 
+### ✔️ Solution 2: Brute-Force Method (Slightly Optimized)
+
+- **Approach**:
+  - If the input list is empty, return an empty string.
+  - Use the first string in the list as the reference word.
+  - Iterate over each character (with index) in the first word.
+  - For every other word in the list, check:
+      - If the current index exceeds the length of the word, or
+      - If the character at this index in the word is different.
+      - If any mismatch is found, return the prefix built so far.
+  - If all characters at the current index match, append the character to the prefix.
+  - After all iterations, return the full prefix.
+
+- **Time Complexity**: `O(N * M)`  
+  - `N` = number of strings.  
+  - `M` = length of the shortest string (we may compare each character across all strings).
+
+- **Space Complexity**: `O(1)`  
+  - Only a few variables used for tracking the prefix.  
+  - No extra data structures are required (excluding output).
+
+---
+
 ### 🔎 Example
 
 ```python
@@ -42,3 +65,4 @@ Output: "fl"
 Input: strs = ["dog", "racecar", "car"]
 Output: ""
 Explanation: There is no common prefix among the input strings.
+```
